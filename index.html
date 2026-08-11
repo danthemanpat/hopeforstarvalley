@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Star Valley Faith & Family Weekend</title>
+  <meta name="description" content="Star Valley Faith & Family Weekend, September 10–13, 2026. Hosted by Friendship Baptist Church (Thayne) and Baptist Community Church (Afton)." />
+  <style>
+    :root {
+      --navy: #08243d;
+      --navy-2: #0d304f;
+      --red: #a93420;
+      --cream: #f7eedc;
+      --paper: #fffaf0;
+      --gold: #d8a449;
+      --ink: #1e252b;
+      --muted: #66707a;
+      --line: rgba(8,36,61,.18);
+      --shadow: 0 14px 35px rgba(8,36,61,.14);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fff7e9 0%, #f8efe1 42%, #ffffff 100%);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,250,240,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      font-weight: 900;
+      letter-spacing: .02em;
+      color: var(--navy);
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    .navlinks {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .navlinks a { text-decoration: none; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--red);
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      border: 2px solid transparent;
+    }
+    .button.secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: rgba(8,36,61,.25);
+    }
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+    .hero-card {
+      overflow: hidden;
+      border-radius: 24px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(8,36,61,.12);
+    }
+    .hero-image { width: 100%; }
+    .hero-copy {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--red);
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    h1, h2, h3 { line-height: 1.12; color: var(--navy); margin: 0; }
+    h1 { font-size: clamp(34px, 6vw, 64px); letter-spacing: -.035em; }
+    h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 14px; }
+    h3 { font-size: 23px; margin-bottom: 8px; }
+    .lead { font-size: 20px; color: #394550; max-width: 720px; margin: 16px 0 0; }
+    .date-box {
+      background: var(--navy);
+      color: white;
+      padding: 24px;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+    .date-box strong { display: block; font-size: 29px; line-height: 1.1; }
+    .date-box span { color: #f6d89e; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    section { max-width: 1120px; margin: 0 auto; padding: 54px 24px; }
+    .section-intro { max-width: 760px; color: #394550; font-size: 18px; margin: 0 0 24px; }
+    .callout {
+      border-left: 6px solid var(--red);
+      background: #fff5e5;
+      padding: 18px 20px;
+      border-radius: 12px;
+      margin-top: 22px;
+      color: #3a342c;
+      font-weight: 700;
+    }
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .event-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 6px 22px rgba(8,36,61,.08);
+    }
+    .event-card img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
+    .event-card div { padding: 20px; }
+    .event-card .meta { color: var(--red); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; margin: 0 0 8px; }
+    .event-card p { margin: 0; color: #46505a; }
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .detail {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .detail strong { color: var(--navy); display: block; font-size: 18px; margin-bottom: 6px; }
+    .hosts {
+      background: var(--navy);
+      color: white;
+      border-radius: 24px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+    .hosts h2 { color: white; }
+    .hosts p { color: rgba(255,255,255,.78); margin: 0; }
+    .host-list { display: grid; gap: 12px; }
+    .host-item { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 14px; padding: 16px; font-weight: 800; }
+    .footer {
+      background: #061d32;
+      color: rgba(255,255,255,.82);
+      text-align: center;
+      padding: 34px 20px;
+      margin-top: 30px;
+    }
+    .footer strong { color: white; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; }
+      .navlinks { display: none; }
+      .hero { padding-top: 18px; }
+      .hero-copy, .hosts { grid-template-columns: 1fr; padding: 22px; }
+      .schedule, .details-grid { grid-template-columns: 1fr; }
+      section { padding: 38px 20px; }
+      .actions .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="brand">Hope for Star Valley</div>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#details">Details</a>
+        <a href="#updates">Updates</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Event introduction">
+      <div class="hero-card">
+        <img class="hero-image" src="SVF-FW-2026.png" alt="Star Valley Faith and Family Weekend, September 10 through 13, 2026" />
+        <div class="hero-copy">
+          <div>
+            <p class="eyebrow">September 10–13, 2026</p>
+            <h1>Star Valley Faith &amp; Family Weekend</h1>
+            <p class="lead">A focused weekend of family-friendly outreach events in Star Valley, hosted by Friendship Baptist Church in Thayne and Baptist Community Church in Afton.</p>
+            <div class="actions">
+              <a class="button" href="#schedule">View weekend schedule</a>
+              <a class="button secondary" href="https://www.facebook.com/" target="_blank" rel="noopener">Follow updates on Facebook</a>
+            </div>
+          </div>
+          <div class="date-box" aria-label="Event date">
+            <span>Save the date</span>
+            <strong>Sept. 10–13</strong>
+            <p>Four days of community outreach, fellowship, and gospel witness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="eyebrow">What is this weekend?</p>
+      <h2>A clear gospel witness for Star Valley</h2>
+      <p class="section-intro">Star Valley Faith &amp; Family Weekend is a multi-day outreach effort designed to place a clear, public gospel witness before our valley. Each gathering is built around a specific audience and schedule so families, men, ladies, students, and churches can participate in a natural way.</p>
+      <div class="callout">Our desire is not merely to host community events, but to use each gathering as an opportunity to point people plainly to Jesus Christ.</div>
+    </section>
+
+    <section id="schedule">
+      <p class="eyebrow">Weekend schedule</p>
+      <h2>Four focused gatherings</h2>
+      <p class="section-intro">Times, locations, and final details will be posted as they are confirmed. Follow the Facebook event for reminders and schedule announcements.</p>
+      <div class="schedule">
+        <article class="event-card">
+          <img src="Ladies-Screen.png" alt="Ladies’ Night Out" />
+          <div>
+            <p class="meta">Thursday, Sept. 10</p>
+            <h3>Ladies’ Night Out</h3>
+            <p>An evening gathering for ladies with fellowship, food, and a focused message.</p>
+          </div>
+        </article>
+        <article class="event-card">
+          <img src="Mens-Screen.png" alt="Men’s Steak Out" />
+          <div>
+            <p class="meta">Friday, Sept. 11</p>
+            <h3>Men’s Steak Out</h3>
+            <p>A men’s event with food, fellowship, and a clear gospel challenge.</p>
+          </div>
+        </article>
+        <article class="event-card">
+          <img src="B2SB-Screen.png" alt="Back to School Bash" />
+          <div>
+            <p class="meta">Saturday, Sept. 12</p>
+            <h3>Back to School Bash</h3>
+            <p>A family-friendly outreach event for students and families as the school year begins.</p>
+          </div>
+        </article>
+        <article class="event-card">
+          <img src="SVWS-Screen.png" alt="Star Valley Worship Service" />
+          <div>
+            <p class="meta">Sunday, Sept. 13</p>
+            <h3>Star Valley Worship Service</h3>
+            <p>A valleywide worship service focused on Christ, Scripture, and the gospel.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="details">
+      <p class="eyebrow">Event details</p>
+      <h2>What to know</h2>
+      <div class="details-grid">
+        <div class="detail"><strong>Who is invited?</strong>Families, students, men, ladies, churches, and neighbors throughout Star Valley.</div>
+        <div class="detail"><strong>Where?</strong>Locations will be announced as each event is finalized.</div>
+        <div class="detail"><strong>Cost?</strong>Event-specific details will be posted soon. Check back for updates.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="hosts">
+        <div>
+          <p class="eyebrow">Hosted by</p>
+          <h2>Two local churches serving together</h2>
+          <p>Star Valley Faith &amp; Family Weekend is hosted by local independent Baptist churches seeking to serve the valley with clarity, warmth, and gospel purpose.</p>
+        </div>
+        <div class="host-list">
+          <div class="host-item">Friendship Baptist Church — Thayne</div>
+          <div class="host-item">Baptist Community Church — Afton</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="updates">
+      <p class="eyebrow">Stay updated</p>
+      <h2>Follow the schedule as it develops</h2>
+      <p class="section-intro">More details, times, locations, and event-specific information will be posted as the weekend approaches.</p>
+      <div class="actions">
+        <a class="button" href="https://www.facebook.com/" target="_blank" rel="noopener">Follow updates on Facebook</a>
+        <a class="button secondary" href="mailto:pastordanpatrick@gmail.com">Contact us by email</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>Star Valley Faith &amp; Family Weekend</strong><br />
+    September 10–13, 2026 · hopeforstarvalley.com
+  </footer>
+</body>
+</html>
