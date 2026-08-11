@@ -177,7 +177,19 @@
     .hosts h2 { color: white; }
     .hosts p { color: rgba(255,255,255,.78); margin: 0; }
     .host-list { display: grid; gap: 12px; }
-    .host-item { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 14px; padding: 16px; font-weight: 800; }
+    .host-item {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 14px;
+      padding: 16px;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .host-item:hover {
+      background: rgba(255,255,255,.14);
+    }
     .footer {
       background: #061d32;
       color: rgba(255,255,255,.82);
@@ -218,7 +230,7 @@
           <div>
             <p class="eyebrow">September 10–13, 2026</p>
             <h1>Star Valley Faith &amp; Family Weekend</h1>
-            <p class="lead">A focused weekend of family-friendly outreach events in Star Valley, hosted by Friendship Baptist Church in Thayne and Baptist Community Church in Afton.</p>
+            <p class="lead">A focused weekend of family-friendly outreach events in Star Valley, hosted by <a href="https://fbcwy.com/" target="_blank" rel="noopener">Friendship Baptist Church in Thayne</a> and <a href="https://www.baptistcommunitychurch-afton.com/" target="_blank" rel="noopener">Baptist Community Church in Afton</a>.</p>
             <div class="actions">
               <a class="button" href="#schedule">View weekend schedule</a>
               <a class="button secondary" href="https://www.facebook.com/share/19NPfpqEDM/" target="_blank" rel="noopener">Follow updates on Facebook</a>
@@ -337,8 +349,8 @@
           <p>Star Valley Faith &amp; Family Weekend is hosted by local independent Baptist churches seeking to serve the valley with clarity, warmth, and gospel purpose.</p>
         </div>
         <div class="host-list">
-          <div class="host-item">Friendship Baptist Church — Thayne</div>
-          <div class="host-item">Baptist Community Church — Afton</div>
+          <a class="host-item" href="https://fbcwy.com/" target="_blank" rel="noopener">Friendship Baptist Church — Thayne</a>
+          <a class="host-item" href="https://www.baptistcommunitychurch-afton.com/" target="_blank" rel="noopener">Baptist Community Church — Afton</a>
         </div>
       </div>
     </section>
