@@ -136,6 +136,35 @@
       color: #3a342c;
       font-weight: 700;
     }
+    .speaker-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 6px 22px rgba(8,36,61,.08);
+}
+
+.speaker-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.speaker-card .section-intro {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 760px) {
+  .speaker-card {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+}
     .schedule {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -215,6 +244,7 @@
       <div class="brand">Hope for Star Valley</div>
       <div class="navlinks">
         <a href="#about">About</a>
+        <a href="#speaker">Speakers</a>
         <a href="#schedule">Schedule</a>
         <a href="#details">Details</a>
         <a href="#updates">Updates</a>
@@ -251,7 +281,24 @@
       <p class="section-intro">Star Valley Faith &amp; Family Weekend is a multi-day outreach effort designed to place a clear, public gospel witness before our valley. Each gathering is built around a specific audience and schedule so families, men, ladies, students, and churches can participate in a natural way.</p>
       <div class="callout">Our desire is not merely to host community events, but to use each gathering as an opportunity to point people plainly to Jesus Christ.</div>
     </section>
+<section id="speaker">
+  <p class="eyebrow">Guest speakers</p>
+  <h2>Matt &amp; April Downs</h2>
 
+  <div class="speaker-card">
+    <img src="matt-april-downs.jpg" alt="Matt and April Downs" />
+
+    <div>
+      <p class="section-intro">Evangelist Matt Downs serves as Camp Director at the Bill Rice Ranch and has served at the Ranch since 2003. He travels with his family throughout the year for evangelistic meetings and teen rally events, with a burden to help young people understand their need of Jesus Christ as Savior.</p>
+
+      <p class="section-intro">Matt will be speaking for most of the weekend gatherings. His wife, April, will speak at Ladies’ Night Out.</p>
+
+      <div class="actions">
+        <a class="button secondary" href="https://billriceranch.org/matt-downs-2/" target="_blank" rel="noopener">Read Matt’s bio</a>
+      </div>
+    </div>
+  </div>
+</section>
     <section id="schedule">
   <p class="eyebrow">Weekend schedule</p>
   <h2>Event details</h2>
